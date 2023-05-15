@@ -5,14 +5,24 @@ namespace Library
 {
     public class Elfo : Personaje, IPersonaje
     {
-        public Elfo(string nombre) // constructor
+        public int Curacion { get; set; } = 10;
+
+        public Elfo(string nombre, int curacion) // constructor
         {
             this.Nombre = nombre;
+            this.Curacion = curacion;
         }
 
         public int Curar(IPersonaje personaje)
         {
-            return personaje.Vida += 10;
+            int curacion = this.Curacion;
+
+            foreach (Elemento elemento in this.Elementos)
+            {
+                curacion += elemento.Curacion;
+            }
+
+            return personaje.Vida += curacion;
         }
     }
 }
