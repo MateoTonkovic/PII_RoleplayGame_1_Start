@@ -1,39 +1,30 @@
 using System;
 using System.Collections.Generic;
-
 namespace Library
 {
-    public class Elfo
-    {
-        public string Nombre { get; set; }
-        public int Vida { get; set; } = 100;
-        public List<string> Items { get; set; }
 
-        public Elfo(string nombre) // constructor
+    public class Enanouno
+    {
+        public int Vida { get; set; } = 100;
+        public string Nombre { get; set; }
+        public List<string> Items { get; set; }
+        public Enanouno(string nombre)//CONSTRUCTOR 
         {
             this.Nombre = nombre;
-            this.Items = new List<string>();
         }
-
         public void Atacar() // método para atacar
         {
             Console.WriteLine($"{Nombre} ha atacado a un enemigo.");
         }
-
-        /*
-        public void Curar() // método para curar (tendría que curar a otro, no a sí mismo)
-        {
-        }
-        */
         public int ObtenerAtaque() // método que retorna el valor del ataque
         {
-            int ataque = 10;
+            int ataque = 20;
             return ataque;
         }
 
         public int ObtenerDefensa() // método que retorna el valor de la defensa
         {
-            int defensa = 10;
+            int defensa = 20;
             return defensa;
         }
 

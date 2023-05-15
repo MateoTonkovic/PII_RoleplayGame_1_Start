@@ -6,13 +6,12 @@ namespace Library
     public class Enano
     {
         public string Nombre { get; set; }
-        public int Vida { get; set; }
+        public int Vida { get; set; } = 100;
         public List<string> Items { get; set; }
 
-        public Enano(string nombre, int vida) // constructor
+        public Enano(string nombre) // constructor
         {
             this.Nombre = nombre;
-            this.Vida = vida;
             this.Items = new List<string>();
         }
 
@@ -20,16 +19,16 @@ namespace Library
         {
             Console.WriteLine($"{Nombre} ha atacado a un enemigo.");
         }
-        
+
         public int ObtenerAtaque() // método que retorna el valor del ataque
         {
-            int ataque = 10;
+            int ataque = 20;
             return ataque;
         }
 
         public int ObtenerDefensa() // método que retorna el valor de la defensa
         {
-            int defensa = 10;
+            int defensa = 20;
             return defensa;
         }
 
