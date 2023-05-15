@@ -10,7 +10,6 @@ namespace Library
         int ObtenerDefensa();
         int ObtenerAtaque();
         void Atacar(IPersonaje personaje);
-        void Curar(IPersonaje personaje);
         void AgregarElemento(IElemento elemento);
         void QuitarElemento(IElemento elemento);
     }

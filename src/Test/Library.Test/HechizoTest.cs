@@ -32,12 +32,6 @@ public class HechizoTest
     }
 
     [Test]
-    public void HechizoCuracionTest()
-    {
-        Assert.AreEqual(10, hechizo.Curacion);
-    }
-
-    [Test]
     public void HechizoNombreTest()
     {
         Assert.AreEqual("hechizo1", hechizo.Nombre);

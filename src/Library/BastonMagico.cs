@@ -3,11 +3,8 @@ using System.Collections.Generic;
 
 namespace Library
 {
-    public class BastonMagico
+    public class BastonMagico : Elemento, IElemento
     {
-        public int Ataque { get; }
-        public int Defensa { get; }
-
         public BastonMagico(int ataque, int defensa)
         {
             this.Ataque = ataque;

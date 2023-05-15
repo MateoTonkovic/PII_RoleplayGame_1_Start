@@ -12,14 +12,12 @@ namespace Library
 
         public int Defensa { get; set; }
 
-        public int Curacion { get; set; }
 
         public Hechizo(string nombre, int ataque, int defensa, int curacion)
         {
             this.Nombre = nombre;
             this.Ataque = ataque;
             this.Defensa = defensa;
-            this.Curacion = curacion;
         }
     }
 }

@@ -18,15 +18,6 @@ public class MagoTest
     }
 
     [Test]
-    public void MagoAtaqueTest()
-    {
-        mago = new Mago("Juan");
-        mago.AgregarItem("Libro", 10, 10);
-
-        Assert.AreEqual(20, mago.Ataque);
-    }
-
-    [Test]
     public void MagoDefensaTest()
     {
         Assert.AreEqual(10, mago.Defensa);
