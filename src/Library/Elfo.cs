@@ -19,12 +19,6 @@ namespace Library
         {
             Console.WriteLine($"{Nombre} ha atacado a un enemigo.");
         }
-
-        /*
-        public void Curar() // método para curar (tendría que curar a otro, no a sí mismo)
-        {
-        }
-        */
         public int ObtenerAtaque() // método que retorna el valor del ataque
         {
             int ataque = 10;
