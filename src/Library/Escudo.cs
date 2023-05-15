@@ -5,12 +5,10 @@ namespace Library
 {
     public class Escudo
     {
-    	public int Ataque { get; set; }
     	public int Defensa { get; set; }
 
-    	public Escudo(int ataque, int defensa)
+    	public Escudo(int defensa)
     	{
-            this.Ataque = ataque;
             this.Defensa = defensa;
     	}
 
