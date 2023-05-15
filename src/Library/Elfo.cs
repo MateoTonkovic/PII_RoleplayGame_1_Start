@@ -6,13 +6,12 @@ namespace Library
     public class Elfo
     {
         public string Nombre { get; set; }
-        public int Vida { get; set; }
+        public int Vida { get; set; } = 100;
         public List<string> Items { get; set; }
 
-        public Elfo(string nombre, int vida) // constructor
+        public Elfo(string nombre) // constructor
         {
             this.Nombre = nombre;
-            this.Vida = vida;
             this.Items = new List<string>();
         }
 
