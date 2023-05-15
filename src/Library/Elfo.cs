@@ -16,17 +16,6 @@ namespace Library
         {
             Console.WriteLine($"{Nombre} ha atacado a un enemigo.");
         }
-        public int ObtenerAtaque() // método que retorna el valor del ataque
-        {
-            int ataque = 10;
-            return ataque;
-        }
-
-        public int ObtenerDefensa() // método que retorna el valor de la defensa
-        {
-            int defensa = 10;
-            return defensa;
-        }
 
         public void AgregarItem(string item) // método para agregar items a la lista
         {
