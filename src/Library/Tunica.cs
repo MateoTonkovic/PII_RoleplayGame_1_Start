@@ -3,11 +3,8 @@ using System.Collections.Generic;
 
 namespace Library
 {
-    public class Tunica
+    public class Tunica: Elemento, IElemento
     {
-    	public int Ataque { get; set; }
-    	public int Defensa { get; set; }
-
     	public Tunica(int ataque, int defensa)
     	{
             this.Ataque = ataque;

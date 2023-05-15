@@ -2,11 +2,8 @@ using System;
 using System.Collections.Generic;
 namespace Library
 {
-    public class Hacha
+    public class Hacha: Elemento, IElemento
     {
-    	public int Ataque { get; set; }
-    	public int Defensa { get; set; }
-
     	public Hacha(int ataque, int defensa)
     	{
             this.Ataque = ataque;

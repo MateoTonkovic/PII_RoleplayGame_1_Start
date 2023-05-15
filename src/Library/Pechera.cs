@@ -3,9 +3,8 @@ using System.Collections.Generic;
 
 namespace Library
 {
-    public class Pechera
+    public class Pechera: Elemento, IElemento
     {
-    	public int Defensa { get; set; }
 
     	public Pechera(int defensa)
     	{
