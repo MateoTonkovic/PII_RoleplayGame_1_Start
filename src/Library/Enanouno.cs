@@ -46,5 +46,10 @@ namespace Library
                 Console.WriteLine($"{item} no se encontraba en el inventario de {Nombre}.");
             }
         }
+
+        public void RecibirCura(int cura) // método para ser curado por un elfo
+        {
+            this.Vida += cura;
+        }
     }
 }
