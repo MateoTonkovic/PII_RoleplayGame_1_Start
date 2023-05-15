@@ -40,8 +40,8 @@ namespace Library.Test
         [Test]
         public void ElfoNombreTest()
         {
-            Elfo elfo = new Elfo("Pedro");
-            Assert.AreEqual("Pedro", elfo.Nombre);
+            Enano enano = new Enano("Pedro");
+            Assert.AreEqual("Pedro", enano.Nombre);
         }
     }
 }

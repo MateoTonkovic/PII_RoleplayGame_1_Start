@@ -13,7 +13,7 @@ namespace Library.Test
         public void ElfoConstructorTest()
         {
             Elfo elfo = new Elfo("Pedro");
-            elfo.AgregarElemento(new Lanza(10, 10));
+            elfo.AgregarElemento(new Hacha(10, 10));
 
             Assert.IsNotNull(elfo);
         }
@@ -23,7 +23,7 @@ namespace Library.Test
         {
 
             Elfo elfo = new Elfo("Pedro");
-            elfo.AgregarElemento(new Lanza(10, 10));
+            elfo.AgregarElemento(new Hacha(10, 10));
 
 
             Assert.AreEqual(10, elfo.ObtenerDefensa());
