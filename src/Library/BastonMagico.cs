@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Library
 {
-    class BastonMagico
+    public class BastonMagico
     {
         public int Ataque { get; }
         public int Defensa { get; }
