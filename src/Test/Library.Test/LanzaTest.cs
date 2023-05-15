@@ -1,33 +1,38 @@
-namespace Library.Test;
+using NUnit.Framework;
 
-public class LanzaTest
+namespace Library.Test
 {
-    public LanzaTest lanza;
-
-    [SetUp]
-    public void SetUp()
+    public class LanzaTest
     {
-    }
+        private Lanza lanza;
 
-    [Test]
-    public void LanzaConstructorTest()
-    {
-        lanza = new Lanza(10, 10);
+        [SetUp]
+        public void SetUp()
+        {
+        }
 
-        Assert.IsNotNull(lanza);
-    }
+        [Test]
+        public void LanzaConstructorTest()
+        {
+            lanza = new Lanza(10, 10);
 
-    [Test]
-    public void LanzaAtaqueTest()
-    {
-        lanza = new Lanza(10, 10);
+            Assert.IsNotNull(lanza);
+        }
 
-        Assert.AreEqual(10, lanza.Ataque);
-    }
+        [Test]
+        public void LanzaAtaqueTest()
+        {
+            lanza = new Lanza(10, 10);
 
-    [Test]
-    public void LanzaDefensaTest()
-    {
-        Assert.AreEqual(10, lanza.Defensa);
+            Assert.AreEqual(10, lanza.Ataque);
+        }
+
+        [Test]
+        public void LanzaDefensaTest()
+        {
+            lanza = new Lanza(10, 10);
+
+            Assert.AreEqual(10, lanza.Defensa);
+        }
     }
 }

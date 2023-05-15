@@ -1,44 +1,47 @@
-namespace Library.Test;
+using NUnit.Framework;
 
-public class ElfoTest
+namespace Library.Test
 {
-    [SetUp]
-    public void SetUp()
+    public class ElfoTest
     {
-    }
+        [SetUp]
+        public void SetUp()
+        {
+        }
 
-    [Test]
-    public void ElfoConstructorTest()
-    {
-        Elfo elfo = new Elfo("Pedro");
-        elfo.AgregarElemento(new Lanza(10, 10));
+        [Test]
+        public void ElfoConstructorTest()
+        {
+            Elfo elfo = new Elfo("Pedro");
+            elfo.AgregarElemento(new Lanza(10, 10));
 
-        Assert.IsNotNull(elfo);
-    }
+            Assert.IsNotNull(elfo);
+        }
 
-    [Test]
-    public void ElfoDefensaTest()
-    {
+        [Test]
+        public void ElfoDefensaTest()
+        {
 
-        Elfo elfo = new Elfo("Pedro");
-        elfo.AgregarElemento(new Lanza(10, 10));
+            Elfo elfo = new Elfo("Pedro");
+            elfo.AgregarElemento(new Lanza(10, 10));
 
 
-        Assert.AreEqual(10, elfo.ObtenerDefensa());
-    }
+            Assert.AreEqual(10, elfo.ObtenerDefensa());
+        }
 
-    [Test]
-    public void ElfoVidaTest()
-    {
-        Elfo elfo = new Elfo("Pedro");
+        [Test]
+        public void ElfoVidaTest()
+        {
+            Elfo elfo = new Elfo("Pedro");
 
-        Assert.AreEqual(100, elfo.Vida);
-    }
+            Assert.AreEqual(100, elfo.Vida);
+        }
 
-    [Test]
-    public void ElfoNombreTest()
-    {
-        Elfo elfo = new Elfo("Pedro");
-        Assert.AreEqual("Pedro", elfo.Nombre);
+        [Test]
+        public void ElfoNombreTest()
+        {
+            Elfo elfo = new Elfo("Pedro");
+            Assert.AreEqual("Pedro", elfo.Nombre);
+        }
     }
 }

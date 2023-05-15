@@ -1,33 +1,38 @@
-namespace Library.Test;
+using NUnit.Framework;
 
-public class EspadaTest
+namespace Library.Test
 {
-    public EspadaTest espada;
-
-    [SetUp]
-    public void SetUp()
+    public class EspadaTest
     {
-    }
+        private Espada espada;
 
-    [Test]
-    public void EspadaConstructorTest()
-    {
-        espada = new Espada(10, 10);
+        [SetUp]
+        public void SetUp()
+        {
+        }
 
-        Assert.IsNotNull(espada);
-    }
+        [Test]
+        public void EspadaConstructorTest()
+        {
+            espada = new Espada(10, 10);
 
-    [Test]
-    public void EspadaAtaqueTest()
-    {
-        espada = new Espada(10, 10);
+            Assert.IsNotNull(espada);
+        }
 
-        Assert.AreEqual(10, espada.Ataque);
-    }
+        [Test]
+        public void EspadaAtaqueTest()
+        {
+            espada = new Espada(10, 10);
 
-    [Test]
-    public void EspadaDefensaTest()
-    {
-        Assert.AreEqual(10, espada.Defensa);
+            Assert.AreEqual(10, espada.Ataque);
+        }
+
+        [Test]
+        public void EspadaDefensaTest()
+        {
+            espada = new Espada(10, 10);
+
+            Assert.AreEqual(10, espada.Defensa);
+        }
     }
 }

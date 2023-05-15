@@ -1,33 +1,36 @@
-namespace Library.Test;
+using NUnit.Framework;
 
-public class BastonMagicoTest
+namespace Library.Test
 {
-    public BastonMagico bastonMagico;
-
-    [SetUp]
-    public void SetUp()
+    public class BastonMagicoTest
     {
-    }
+        public BastonMagico bastonMagico;
 
-    [Test]
-    public void BastonMagicoConstructorTest()
-    {
-        bastonMagico = new BastonMagico(10, 10);
+        [SetUp]
+        public void SetUp()
+        {
+        }
 
-        Assert.IsNotNull(bastonMagico);
-    }
+        [Test]
+        public void BastonMagicoConstructorTest()
+        {
+            bastonMagico = new BastonMagico(10, 10);
 
-    [Test]
-    public void BastonMagicoAtaqueTest()
-    {
-        bastonMagico = new BastonMagico(10, 10);
+            Assert.IsNotNull(bastonMagico);
+        }
 
-        Assert.AreEqual(10, bastonMagico.Ataque);
-    }
+        [Test]
+        public void BastonMagicoAtaqueTest()
+        {
+            bastonMagico = new BastonMagico(10, 10);
 
-    [Test]
-    public void BastonMagicoDefensaTest()
-    {
-        Assert.AreEqual(10, bastonMagico.Defensa);
+            Assert.AreEqual(10, bastonMagico.Ataque);
+        }
+
+        [Test]
+        public void BastonMagicoDefensaTest()
+        {
+            Assert.AreEqual(10, bastonMagico.Defensa);
+        }
     }
 }
