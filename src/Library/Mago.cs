@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-public class Mago<T>
+public class Mago
 {
     public string Nombre { get; set; }
 
