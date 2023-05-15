@@ -3,10 +3,8 @@ using System.Collections.Generic;
 
 namespace Library
 {
-    public class Espada
+    public class Espada: Elemento, IElemento
     {
-    	public int Ataque { get; set; }
-    	public int Defensa { get; set; }
 
     	public Espada(int ataque, int defensa)
     	{
