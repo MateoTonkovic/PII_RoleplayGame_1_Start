@@ -19,6 +19,7 @@ namespace Library
 
         public void Curar() // método para curar (tendría que curar a otro, no a sí mismo)
         {
+            //Falta
         }
 
         public int ObtenerAtaque() // método que retorna el valor del ataque
