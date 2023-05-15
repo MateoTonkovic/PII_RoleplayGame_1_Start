@@ -3,10 +3,8 @@ using System.Collections.Generic;
 namespace Library
 {
 
-    public class Elfouno
+    public class Elfouno : Personaje, IPersonaje
     {
-        public int Vida { get; set; } = 100;
-        public string Nombre { get; set; }
         public List<string> Items { get; set; }
         public Elfouno(string nombre)//CONSTRUCTOR 
         {

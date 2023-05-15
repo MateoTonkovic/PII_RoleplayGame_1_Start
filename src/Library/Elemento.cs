@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 
-namespace Library 
+namespace Library
 {
-    public class Elemento 
+    public class Elemento
     {
         public int Ataque { get; set; }
 
