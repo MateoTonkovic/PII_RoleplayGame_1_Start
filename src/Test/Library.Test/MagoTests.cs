@@ -2,8 +2,6 @@ namespace Library.Test;
 
 public class MagoTest
 {
-    public Mago mago;
-
     [SetUp]
     public void SetUp()
     {
@@ -12,7 +10,8 @@ public class MagoTest
     [Test]
     public void MagoConstructorTest()
     {
-        mago = new Mago("Juan");
+        Mago mago = new Mago("Juan");
+        mago.AgregarElemento(new BastonMagico(10, 10));
 
         Assert.IsNotNull(mago);
     }
@@ -20,26 +19,26 @@ public class MagoTest
     [Test]
     public void MagoDefensaTest()
     {
-        Assert.AreEqual(10, mago.Defensa);
+
+        Mago mago = new Mago("Juan");
+        mago.AgregarElemento(new BastonMagico(10, 10));
+
+
+        Assert.AreEqual(10, mago.ObtenerDefensa());
     }
 
     [Test]
     public void MagoVidaTest()
     {
+        Mago mago = new Mago("Juan");
+
         Assert.AreEqual(100, mago.Vida);
     }
 
     [Test]
     public void MagoNombreTest()
     {
+        Mago mago = new Mago("Juan");
         Assert.AreEqual("Juan", mago.Nombre);
-    }
-
-    [Test]
-    public void MagoNombreTest2()
-    {
-        mago = new Mago("Pedro");
-
-        Assert.AreEqual("Pedro", mago.Nombre);
     }
 }

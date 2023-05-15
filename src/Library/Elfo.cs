@@ -3,37 +3,16 @@ using System.Collections.Generic;
 
 namespace Library
 {
-    public class Elfo: Personaje, IPersonaje
+    public class Elfo : Personaje, IPersonaje
     {
-
         public Elfo(string nombre) // constructor
         {
             this.Nombre = nombre;
-            this.Items = new List<string>();
         }
 
-        public void Atacar() // método para atacar
+        public int Curar(IPersonaje personaje)
         {
-            Console.WriteLine($"{Nombre} ha atacado a un enemigo.");
-        }
-
-        public void AgregarItem(string item) // método para agregar items a la lista
-        {
-            Items.Add(item);
-            Console.WriteLine($"{item} ha sido agregado al inventario de {Nombre}.");
-        }
-
-        public void RemoverItem(string item) // método para borrar items de la lista
-        {
-            if (Items.Contains(item))
-            {
-                Items.Remove(item);
-                Console.WriteLine($"{item} ha sido removido del inventario de {Nombre}.");
-            }
-            else
-            {
-                Console.WriteLine($"{item} no se encontraba en el inventario de {Nombre}.");
-            }
+            return personaje.Vida += 10;
         }
     }
 }

@@ -10,10 +10,5 @@ namespace Library
         {
             this.Nombre = nombre;
         }
-
-        public int ObtenerDaño()
-        {
-            return this.Ataque;
-        }
     }
 }

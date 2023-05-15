@@ -12,7 +12,7 @@ public class HechizoTest
     [Test]
     public void HechizoConstructorTest()
     {
-        hechizo = new Hechizo("hechizo1", 10, 10, 10);
+        hechizo = new Hechizo("hechizo1", 10, 10);
 
         Assert.IsNotNull(hechizo);
     }
@@ -20,7 +20,7 @@ public class HechizoTest
     [Test]
     public void HechizoAtaqueTest()
     {
-        hechizo = new Hechizo("hechizo1", 10, 10, 10);
+        hechizo = new Hechizo("hechizo1", 10, 10);
 
         Assert.AreEqual(10, hechizo.Ataque);
     }
@@ -40,7 +40,7 @@ public class HechizoTest
     [Test]
     public void HechizoNombreTest2()
     {
-        hechizo = new Hechizo("hechizo2", 10, 10, 10);
+        hechizo = new Hechizo("hechizo2", 10, 10);
 
         Assert.AreEqual("hechizo2", hechizo.Nombre);
     }
@@ -48,7 +48,7 @@ public class HechizoTest
     [Test]
     public void HechizoAtaqueTest2()
     {
-        hechizo = new Hechizo("hechizo2", 10, 10, 10);
+        hechizo = new Hechizo("hechizo2", 10, 10);
 
         Assert.AreEqual(10, hechizo.Ataque);
     }

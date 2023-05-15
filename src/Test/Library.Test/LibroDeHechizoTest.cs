@@ -44,10 +44,11 @@ public class LibroDeHechizoTest
     [Test]
     public void LibroDeHechizoAgregarHechizoTest()
     {
-        libroDeHechizo = new LibroDeHechizo();
-        libroDeHechizo.AgrgarHechizo("Hechizo1", 10, 10, 10);
+        LibroDeHechizo libroDeHechizo = new LibroDeHechizo();
+        Hechizo hechizo = new Hechizo("Hechizo1", 10, 10);
 
-        Assert.AreEqual(10, libroDeHechizo.Curacion);
+        libroDeHechizo.AgrgarHechizo(hechizo);
+
         Assert.AreEqual(10, libroDeHechizo.Ataque);
         Assert.AreEqual(10, libroDeHechizo.Defensa);
     }
@@ -55,11 +56,13 @@ public class LibroDeHechizoTest
     [Test]
     public void LibroDeHechizoAgregarHechizoTest2()
     {
-        libroDeHechizo = new LibroDeHechizo();
-        libroDeHechizo.AgrgarHechizo("Hechizo1", 10, 10, 10);
-        libroDeHechizo.AgrgarHechizo("Hechizo2", 10, 10, 10);
+        LibroDeHechizo libroDeHechizo = new LibroDeHechizo();
+        Hechizo hechizo = new Hechizo("Hechizo1", 10, 10);
+        Hechizo hechizo2 = new Hechizo("Hechizo2", 10, 10);
 
-        Assert.AreEqual(20, libroDeHechizo.Curacion);
+        libroDeHechizo.AgrgarHechizo(hechizo);
+        libroDeHechizo.AgrgarHechizo(hechizo2);
+
         Assert.AreEqual(20, libroDeHechizo.Ataque);
         Assert.AreEqual(20, libroDeHechizo.Defensa);
     }

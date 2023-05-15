@@ -4,14 +4,22 @@ using System.Collections.Generic;
 
 namespace Library
 {
-    public class LibroDeHechizo: Elemento, IElemento
+    public class LibroDeHechizo : Elemento, IElemento
     {
-        public void AgrgarHechizo(string nombreDeHechizo, int curacionDeHechizo, int ataqueDeHechizo, int defensaDeHechizo)
+        public List<Hechizo> Hechizos { get; set; } = new List<Hechizo>();
+
+        public void AgrgarHechizo(Hechizo hechizo)
         {
-            this.Hechizo.Add(nombreDeHechizo);
-            this.Curacion += curacionDeHechizo;
-            this.Ataque += ataqueDeHechizo;
-            this.Defensa += defensaDeHechizo;
+            this.Hechizos.Add(hechizo);
+            this.Ataque += hechizo.Ataque;
+            this.Defensa += hechizo.Defensa;
+        }
+
+        public void QuitarHechizo(Hechizo hechizo)
+        {
+            this.Hechizos.Remove(hechizo);
+            this.Ataque -= hechizo.Ataque;
+            this.Defensa -= hechizo.Defensa;
         }
     }
 }
