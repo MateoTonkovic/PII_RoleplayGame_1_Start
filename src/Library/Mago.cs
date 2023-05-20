@@ -4,12 +4,14 @@ using System.Collections.Generic;
 
 namespace Library
 {
-    public class Mago : Personaje
+    public class Mago : Heroe
     {
 
 
         public Mago(string nombre)
         {
+            this.Nombre = nombre;
+            this.PuntosDeVictoria = 0;
         }
 
         public void AgregarItemMagico(ILibroDeHechizo libroDeHechizo)
