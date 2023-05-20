@@ -3,23 +3,11 @@ using System.Collections.Generic;
 
 namespace Library
 {
-    public class IPersonajeMagico
+    public interface IPersonajeMagico : IPersonaje
     {
-        public void AgregarHechizo(string hechizo)
-        {
-
-        }
-        public void BorrarHechizo(string hechizo)
-        {
-            
-        }
-        public void AgregarItem(string item)
-        {
-
-        }
-        public void BorrarItem(string item)
-        {
-            
-        }
+        public void AgregarHechizo(string hechizo);
+        public void BorrarHechizo(string hechizo);
+        public void AgregarElementoMagico(string item);
+        public void BorrarElementoMagico(string item);
     }
 }
