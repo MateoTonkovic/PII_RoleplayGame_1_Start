@@ -7,12 +7,6 @@ namespace Library
     {
         public int ValorPuntosDeVictoria { get; set; }
 
-        public Heroe(string nombre, int vida)
-        {
-            this.Nombre = nombre;
-            this.Vida = vida;
-        }
-
         public void AgregarPuntosDeVictoria(int puntosDeVictoria)
         {
             this.ValorPuntosDeVictoria += puntosDeVictoria;

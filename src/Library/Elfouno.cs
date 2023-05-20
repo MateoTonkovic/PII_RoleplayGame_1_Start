@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 namespace Library
 {
-    public class Elfouno : Personaje, IPersonaje
+    public class Elfouno : Heroe
     {
         public int Curacion { get; set; } = 10;
 
