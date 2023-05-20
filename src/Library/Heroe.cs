@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Library
 {
-    public class Personaje
+    public class Heroe : IHeroe
     {
         public string Nombre { get; set; }
 
@@ -12,6 +12,7 @@ namespace Library
         public int Ataque { get; set; }
 
         public int Defensa { get; set; }
+
 
         public List<IElemento> Elementos = new List<IElemento>();
 
