@@ -1,9 +1,9 @@
 namespace Library
 {
-    public interface IHechizo
-    {
-        string Nombre { get; set; }
-        int Ataque { get; set; }
-        int Defensa { get; set; }
-    }
+public interface IHechizo
+{
+    int ValorAtaque { get; set; }
+    int ValorDefensa { get; set; }
+}
+
 }
