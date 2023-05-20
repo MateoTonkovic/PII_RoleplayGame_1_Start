@@ -11,7 +11,9 @@ namespace Library
         {
             this.Nombre = nombre;
             this.Curacion = curacion;
+            this.PuntosDeVictoria = 0;
         }
+
         public int Curar(IPersonaje personaje)
         {
             int curacion = this.Curacion;
