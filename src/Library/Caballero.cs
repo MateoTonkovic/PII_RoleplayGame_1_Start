@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Library
 {
-    public class Caballero : Enemigo, IEnemigo
+    public class Caballero : Enemigo
     {
         public Caballero(string nombre, int puntoDeVictoria)
         {
