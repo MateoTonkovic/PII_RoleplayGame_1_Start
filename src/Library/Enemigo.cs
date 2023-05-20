@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Library
 {
-    public class Enemigo : IEnemigo
+    public class Enemigo
     {
         public string Nombre { get; set; }
 
@@ -15,7 +15,7 @@ namespace Library
 
         public List<IElemento> Elementos = new List<IElemento>();
 
-        public Enemigo(string nombre, int vida, )
+        public Enemigo(string nombre, int vida)
         {
             
         }
