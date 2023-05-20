@@ -1,0 +1,4 @@
+public interface IElementoDefensa
+{
+    int Defensa { get; set; }
+}
