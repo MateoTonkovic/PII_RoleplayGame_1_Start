@@ -4,12 +4,17 @@ using System.Collections.Generic;
 
 namespace Library
 {
-    public class Mago : Personaje, IPersonaje
+    public class Mago : Personaje
     {
+
 
         public Mago(string nombre)
         {
-            this.Nombre = nombre;
+        }
+
+        public void AgregarItemMagico(ILibroDeHechizo libroDeHechizo)
+        {
+            this.AgregarElemento(libroDeHechizo);
         }
     }
 }
