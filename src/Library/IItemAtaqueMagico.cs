@@ -3,10 +3,12 @@ using System.Linq;
 using System.Text;
 
 namespace Library
-{    
-    public interface IEnemigo : IPersonaje
+{
+   
+    
+    public interface IItemMagicoAtaque
     {
-        int ObtenerValorPuntosDeVictoria();
+      int ObtenerValorAtaque();
     
     }
 }

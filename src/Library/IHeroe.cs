@@ -8,18 +8,7 @@ namespace Library
     
     public interface IHeroe : IPersonaje
     {
-        int Vida { get; set; }
-        int Ataque { get; set; }
-        int ValorPuntosDeVictoria { get; set; }
-        int Defensa { get; set; }
-
-        int ObtenerVida();
-        int ObtenerDefensa();
-        int ObtenerAtaque();
-        void Atacar(IPersonaje personaje);
-        void AgregarElemento(IElemento elemento);
-        void QuitarElemento(IElemento elemento);
-        void ObtenerValorPuntosDeVictoria();
+        int ObtenerValorPuntosDeVictoria();
         void AgregarPuntosDeVictoria(int puntosDeVictoria);
     
     }
