@@ -6,10 +6,11 @@ namespace Library
 {
     // Your additional using statements go here
     
-    public interface IHeroe : IPersonaje
+    public interface IMyInterface
     {
-        int ObtenerValorPuntosDeVictoria();
-        void AgregarPuntosDeVictoria(int puntosDeVictoria);
-    
+        // Define your members here
+        void Method1();
+        int Method2(string param);
+        // ...
     }
 }
