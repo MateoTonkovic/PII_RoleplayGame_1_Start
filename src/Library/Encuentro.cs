@@ -1,5 +1,3 @@
-
-
 using System;
 using System.Collections.Generic;
 
@@ -23,48 +21,14 @@ namespace Library
 
                 if (this.Heroes.Count > 0)
                 {
-                    int positionToAttack = 0;
-
-                    for (int i = 0; i < Enemigos.Count; i++)
-                    {
-                        this.Lucha(Heroes[i], Enemigos[positionToAttack]);
-
-
-                        if (i-- > Heroes.Count)
-                        {
-                            positionToAttack = 0;
-                        }
-                        else
-                        {
-                            positionToAttack++;
-                        }
-                    }
+                    this.TurnoDeAtaque(this.Enemigos, this.Heroes);
                 }
 
-                // foreach (IPersonaje enemigo in this.Enemigos)
-                // {
-                //     if (this.Heroes.Count > 0)
-                //     {
-                //         this.Heroes[0].Vida -= enemigo.ObtenerAtaque() - this.Heroes[0].ObtenerDefensa();
-                //         if (this.Heroes[0].Vida <= 0)
-                //         {
-                //             this.Heroes.RemoveAt(0);
-                //         }
-                //     }
-                // }
-                foreach (IPersonaje heroe in this.Heroes)
+                if (this.Enemigos.Count > 0)
                 {
-                    foreach (IPersonaje enemigo in this.Enemigos)
-                    {
-                        enemigo.Vida -= heroe.ObtenerAtaque() - enemigo.ObtenerDefensa();
-                        if (enemigo.Vida <= 0)
-                        {
-                            heroe.Vida += enemigo.ObtenerVida();
-                            this.Enemigos.Remove(enemigo);
-                            break;
-                        }
-                    }
+                    this.TurnoDeAtaque(this.Heroes, this.Enemigos);
                 }
+
             }
             foreach (IPersonaje heroe in this.Heroes)
             {
@@ -82,6 +46,25 @@ namespace Library
             if (power > 0)
             {
                 defensor.Vida -= power;
+            }
+        }
+
+        public void TurnoDeAtaque(List<IPersonaje> atacantes, List<IPersonaje> defensores)
+        {
+            int positionToAttack = 0;
+
+            for (int i = 0; i < defensores.Count; i++)
+            {
+                this.Lucha(atacantes[i], defensores[positionToAttack]);
+
+                if (i + 1 > atacantes.Count)
+                {
+                    positionToAttack = 0;
+                }
+                else
+                {
+                    positionToAttack = positionToAttack++;
+                }
             }
         }
 
