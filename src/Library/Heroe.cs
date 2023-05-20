@@ -5,11 +5,11 @@ namespace Library
 {
     public class Heroe : Personaje, IHeroe
     {
-        public int ValorPuntosDeVictoria { get; set; }
+        public int PuntosDeVictoria { get; set; } = 0;
 
         public void AgregarPuntosDeVictoria(int puntosDeVictoria)
         {
-            this.ValorPuntosDeVictoria += puntosDeVictoria;
+            this.PuntosDeVictoria += puntosDeVictoria;
         }
     }
 }

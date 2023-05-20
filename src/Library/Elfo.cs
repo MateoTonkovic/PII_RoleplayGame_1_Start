@@ -9,8 +9,9 @@ namespace Library
         public Elfo(string nombre) // constructor
         {
             this.Nombre = nombre;
+            this.PuntosDeVictoria = 0;
         }
-        
+
         public int Curar(IPersonaje personaje)
         {
             return personaje.Vida += 10;
