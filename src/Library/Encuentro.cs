@@ -5,10 +5,10 @@ namespace Library
 {
     public class Encuentro
     {
-        public List<IPersonaje> Heroes = new List<IPersonaje>();
-        public List<IPersonaje> Enemigos = new List<IPersonaje>();
+        public List<IHeroe> Heroes = new List<IHeroe>();
+        public List<IEnemigo> Enemigos = new List<IEnemigo>();
 
-        public Encuentro(List<IPersonaje> heroes, List<IPersonaje> enemigos)
+        public Encuentro(List<IHeroe> heroes, List<IEnemigo> enemigos)
         {
             this.Heroes = heroes;
             this.Enemigos = enemigos;
@@ -21,21 +21,58 @@ namespace Library
 
                 if (this.Heroes.Count > 0)
                 {
-                    this.TurnoDeAtaque(this.Enemigos, this.Heroes);
+
+                    {
+                        int positionToAttack = 0;
+
+                        for (int i = 0; i < this.Heroes.Count; i++)
+                        {
+                            this.Lucha(this.Enemigos[i], this.Heroes[positionToAttack]);
+
+                            if (i + 1 > Heroes.Count)
+                            {
+                                positionToAttack = 0;
+                            }
+                            else
+                            {
+                                positionToAttack = positionToAttack++;
+                            }
+                        }
+                    }
+
                 }
 
                 if (this.Enemigos.Count > 0)
                 {
-                    this.TurnoDeAtaque(this.Heroes, this.Enemigos);
+                    {
+                        int positionToAttack = 0;
+
+                        for (int i = 0; i < this.Enemigos.Count; i++)
+                        {
+                            this.Lucha(this.Heroes[i], this.Enemigos[positionToAttack]);
+
+                            if (i + 1 > Enemigos.Count)
+                            {
+                                positionToAttack = 0;
+                            }
+                            else
+                            {
+                                positionToAttack = positionToAttack++;
+                            }
+                        }
+                    }
+
                 }
 
             }
-            foreach (IPersonaje heroe in this.Heroes)
+
+
+            foreach (IHeroe heroe in this.Heroes)
             {
-                // if (heroe.ObtenerVida() > 0 && heroe.ObtenerPuntos() >= 5)
-                // {
-                //     heroe.Vida += 10;
-                // }
+                if (heroe.ObtenerVida() > 0 && heroe.ObtenerValorPuntosDeVictoria() >= 5)
+                {
+                    heroe.Vida = 100;
+                }
             }
         }
 
@@ -46,25 +83,6 @@ namespace Library
             if (power > 0)
             {
                 defensor.Vida -= power;
-            }
-        }
-
-        public void TurnoDeAtaque(List<IPersonaje> atacantes, List<IPersonaje> defensores)
-        {
-            int positionToAttack = 0;
-
-            for (int i = 0; i < defensores.Count; i++)
-            {
-                this.Lucha(atacantes[i], defensores[positionToAttack]);
-
-                if (i + 1 > atacantes.Count)
-                {
-                    positionToAttack = 0;
-                }
-                else
-                {
-                    positionToAttack = positionToAttack++;
-                }
             }
         }
 
