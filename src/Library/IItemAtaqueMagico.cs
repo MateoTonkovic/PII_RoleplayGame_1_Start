@@ -4,13 +4,11 @@ using System.Text;
 
 namespace Library
 {
-    // Your additional using statements go here
+   
     
-    public interface IMyInterface
+    public interface IItemMagicoAtaque
     {
-        // Define your members here
-        void Method1();
-        int Method2(string param);
-        // ...
+      int ObtenerValorAtaque();
+    
     }
 }
