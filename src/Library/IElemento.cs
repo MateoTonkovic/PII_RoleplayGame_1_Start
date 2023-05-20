@@ -5,3 +5,5 @@ public interface IElemento
     int Curacion { get; set; }
     bool EsMagico { get; set; }
 }
+
+//HAY QUE CAMBIAR IElementoAtaque + IElementoDefensa
