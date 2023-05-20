@@ -6,66 +6,16 @@ namespace Library
     public class Heroe : IHeroe
     {
         public string Nombre { get; set; }
-
-        public int Vida { get; set; } = 100;
-
-        public int Ataque { get; set; }
-
+        public int Vida { get; set; }
         public int Defensa { get; set; }
+        public int Ataque { get; set; }
+        public int ValorPuntosDeVictoria { get; set; }
 
-
-        public List<IElemento> Elementos = new List<IElemento>();
-
-        public int ObtenerVida()
+        public Heroe(string nombre, int vida)
         {
-            return this.Vida;
+            this.Nombre = nombre;
+            this.Vida = vida;
         }
 
-        public int ObtenerAtaque()
-        {
-            int ataque = this.Ataque;
-
-            foreach (Elemento elemento in this.Elementos)
-            {
-                ataque += elemento.Ataque;
-            }
-
-            return ataque;
-        }
-
-        public int ObtenerDefensa()
-        {
-            int defensa = this.Defensa;
-
-            foreach (Elemento elemento in this.Elementos)
-            {
-                defensa += elemento.Defensa;
-            }
-
-            return defensa;
-        }
-
-        public void Atacar(IPersonaje personaje)
-        {
-            int ataque = this.ObtenerAtaque();
-            int defensa = personaje.ObtenerDefensa();
-
-            int danio = ataque - defensa;
-
-            if (danio > 0)
-            {
-                personaje.Vida -= danio;
-            }
-        }
-
-        public void AgregarElemento(IElemento elemento)
-        {
-            this.Elementos.Add(elemento);
-        }
-
-        public void QuitarElemento(IElemento elemento)
-        {
-            this.Elementos.Remove(elemento);
-        }
     }
 }
