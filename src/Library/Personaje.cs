@@ -13,7 +13,6 @@ namespace Library
 
         public int Defensa { get; set; }
 
-
         public List<IElemento> Elementos = new List<IElemento>();
 
         public int ObtenerVida()
