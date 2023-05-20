@@ -6,10 +6,10 @@ namespace Library
 {
     public class Caballero : Enemigo
     {
-        public Caballero(string nombre, int puntoDeVictoria)
+        public Caballero(string nombre, int puntosDeVictoria)
         {
             this.Nombre = nombre;
-            this.PuntosDeVictoria = puntoDeVictoria;
+            this.PuntosDeVictoria = puntosDeVictoria;
         }
 
     }
