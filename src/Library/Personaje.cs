@@ -65,5 +65,10 @@ namespace Library
         {
             this.Vida -= ataque;
         }
+
+        public int ObtenerPuntosDeVictoria()
+        {
+            return this.PuntosDeVictoria;
+        }
     }
 }

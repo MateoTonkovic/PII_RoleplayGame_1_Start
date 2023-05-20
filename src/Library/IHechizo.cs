@@ -1,14 +1,9 @@
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 namespace Library
 {
-    
-    public interface IHechizo
-    {
-       int ValorAtaque();
-        int ValorDefensa();
-        
-    }
+public interface IHechizo
+{
+    int ValorAtaque { get; set; }
+    int ValorDefensa { get; set; }
+}
+
 }

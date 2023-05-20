@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+
 namespace Library
 {
 
@@ -10,5 +11,6 @@ namespace Library
             this.Nombre = nombre;
             this.PuntosDeVictoria = puntoDeVictoria;
         }
+
     }
 }
