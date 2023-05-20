@@ -6,7 +6,6 @@ namespace Library
 {
     public interface IEnemigo : IPersonaje
     {
-        public int PuntosDeVictoria { get; set; }
         int ObtenerPuntosDeVictoria();
 
     }
