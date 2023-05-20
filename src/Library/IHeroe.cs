@@ -5,11 +5,11 @@ using System.Text;
 namespace Library
 {
     // Your additional using statements go here
-    
+
     public interface IHeroe : IPersonaje
     {
-        int ObtenerValorPuntosDeVictoria();
+        int ObtenerPuntosDeVictoria();
         void AgregarPuntosDeVictoria(int puntosDeVictoria);
-    
+
     }
 }

@@ -13,6 +13,7 @@ namespace Library
 
         public int Defensa { get; set; }
 
+        public int PuntosDeVictoria { get; set; }
 
         public List<IElemento> Elementos = new List<IElemento>();
 
@@ -45,19 +46,6 @@ namespace Library
             return defensa;
         }
 
-        public void Atacar(IPersonaje personaje)
-        {
-            int ataque = this.ObtenerAtaque();
-            int defensa = personaje.ObtenerDefensa();
-
-            int danio = ataque - defensa;
-
-            if (danio > 0)
-            {
-                personaje.Vida -= danio;
-            }
-        }
-
         public void AgregarElemento(IElemento elemento)
         {
             this.Elementos.Add(elemento);
@@ -66,6 +54,16 @@ namespace Library
         public void QuitarElemento(IElemento elemento)
         {
             this.Elementos.Remove(elemento);
+        }
+
+        public void Curar(int vida)
+        {
+            this.Vida += vida;
+        }
+
+        public void RecibirAtaque(int ataque)
+        {
+            this.Vida -= ataque;
         }
     }
 }

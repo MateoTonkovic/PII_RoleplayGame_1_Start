@@ -69,7 +69,7 @@ namespace Library
 
             foreach (IHeroe heroe in this.Heroes)
             {
-                if (heroe.ObtenerVida() > 0 && heroe.ObtenerValorPuntosDeVictoria() >= 5)
+                if (heroe.ObtenerVida() > 0 && heroe.ObtenerPuntosDeVictoria() >= 5)
                 {
                     heroe.Vida = 100;
                 }
