@@ -68,5 +68,28 @@ namespace Library.Test
             Assert.AreEqual(ataqueEsperado, ataque);
 
         }
+
+        [Test]
+        public void EnanoAgregarElementoTest()
+        {
+            Enano enano = new Enano("Carlos");
+            Hacha hacha = new Hacha(15, 10);
+
+            enano.AgregarElemento(hacha);
+
+            Assert.Contains(hacha, enano.Elementos);
+        }
+
+        [Test]
+        public void EnanoQuitarElementoTest()
+        {
+            Enano enano = new Enano("Carlos");
+            Hacha hacha = new Hacha(15, 10);
+            enano.AgregarElemento(hacha);
+
+            enano.QuitarElemento(hacha);
+
+            Assert.IsFalse(enano.Elementos.Contains(hacha));
+        }
     }
 }
