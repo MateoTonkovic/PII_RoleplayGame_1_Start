@@ -1,10 +1,11 @@
 // Heroe
 using System;
 using System.Collections.Generic;
+
 namespace Library
 {
 
-    public class Enanouno: Personaje, IPersonaje
+    public class Enanouno : Heroe
     {
         public Enanouno(string nombre)//CONSTRUCTOR 
         {
