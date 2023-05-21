@@ -1,69 +1,70 @@
-namespace Library.Test;
-
-public class LibroDeHechizoTest
+namespace Library.Test
 {
-    public LibroDeHechizo libroDeHechizo;
-
-    [SetUp]
-    public void SetUp()
+    public class LibroDeHechizoTest
     {
-    }
+        public LibroDeHechizo libroDeHechizo;
 
-    [Test]
-    public void LibroDeHechizoConstructorTest()
-    {
-        libroDeHechizo = new LibroDeHechizo();
+        [SetUp]
+        public void SetUp()
+        {
+        }
 
-        Assert.IsNotNull(libroDeHechizo);
-    }
+        [Test]
+        public void LibroDeHechizoConstructorTest()
+        {
+            libroDeHechizo = new LibroDeHechizo();
 
-    [Test]
-    public void LibroDeHechizoAtaqueTest()
-    {
-        libroDeHechizo = new LibroDeHechizo();
+            Assert.IsNotNull(libroDeHechizo);
+        }
 
-        Assert.AreEqual(0, libroDeHechizo.Ataque);
-    }
+        [Test]
+        public void LibroDeHechizoAtaqueTest()
+        {
+            libroDeHechizo = new LibroDeHechizo();
 
-    [Test]
-    public void LibroDeHechizoDefensaTest()
-    {
-        libroDeHechizo = new LibroDeHechizo();
+            Assert.AreEqual(0, libroDeHechizo.Ataque);
+        }
 
-        Assert.AreEqual(0, libroDeHechizo.Defensa);
-    }
+        [Test]
+        public void LibroDeHechizoDefensaTest()
+        {
+            libroDeHechizo = new LibroDeHechizo();
 
-    [Test]
-    public void LibroDeHechizoCuracionTest()
-    {
-        libroDeHechizo = new LibroDeHechizo();
+            Assert.AreEqual(0, libroDeHechizo.Defensa);
+        }
 
-        Assert.AreEqual(0, libroDeHechizo.Curacion);
-    }
+        [Test]
+        public void LibroDeHechizoCuracionTest()
+        {
+            libroDeHechizo = new LibroDeHechizo();
 
-    [Test]
-    public void LibroDeHechizoAgregarHechizoTest()
-    {
-        LibroDeHechizo libroDeHechizo = new LibroDeHechizo();
-        Hechizo hechizo = new Hechizo("Hechizo1", 10, 10);
+            Assert.AreEqual(0, libroDeHechizo.Curacion);
+        }
 
-        libroDeHechizo.AgrgarHechizo(hechizo);
+        [Test]
+        public void LibroDeHechizoAgregarHechizoTest()
+        {
+            LibroDeHechizo libroDeHechizo = new LibroDeHechizo();
+            Hechizo hechizo = new Hechizo("Hechizo1", 10, 10);
 
-        Assert.AreEqual(10, libroDeHechizo.Ataque);
-        Assert.AreEqual(10, libroDeHechizo.Defensa);
-    }
+            libroDeHechizo.AgrgarHechizo(hechizo);
 
-    [Test]
-    public void LibroDeHechizoAgregarHechizoTest2()
-    {
-        LibroDeHechizo libroDeHechizo = new LibroDeHechizo();
-        Hechizo hechizo = new Hechizo("Hechizo1", 10, 10);
-        Hechizo hechizo2 = new Hechizo("Hechizo2", 10, 10);
+            Assert.AreEqual(10, libroDeHechizo.Ataque);
+            Assert.AreEqual(10, libroDeHechizo.Defensa);
+        }
 
-        libroDeHechizo.AgrgarHechizo(hechizo);
-        libroDeHechizo.AgrgarHechizo(hechizo2);
+        [Test]
+        public void LibroDeHechizoAgregarHechizoTest2()
+        {
+            LibroDeHechizo libroDeHechizo = new LibroDeHechizo();
+            Hechizo hechizo = new Hechizo("Hechizo1", 10, 10);
+            Hechizo hechizo2 = new Hechizo("Hechizo2", 10, 10);
 
-        Assert.AreEqual(20, libroDeHechizo.Ataque);
-        Assert.AreEqual(20, libroDeHechizo.Defensa);
+            libroDeHechizo.AgrgarHechizo(hechizo);
+            libroDeHechizo.AgrgarHechizo(hechizo2);
+
+            Assert.AreEqual(20, libroDeHechizo.Ataque);
+            Assert.AreEqual(20, libroDeHechizo.Defensa);
+        }
     }
 }

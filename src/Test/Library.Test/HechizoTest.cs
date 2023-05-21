@@ -1,55 +1,56 @@
-namespace Library.Test;
-
-public class HechizoTest
+namespace Library.Test
 {
-    public Hechizo hechizo;
-
-    [SetUp]
-    public void SetUp()
+    public class HechizoTest
     {
-    }
+        public Hechizo hechizo;
 
-    [Test]
-    public void HechizoConstructorTest()
-    {
-        hechizo = new Hechizo("hechizo1", 10, 10);
+        [SetUp]
+        public void SetUp()
+        {
+        }
 
-        Assert.IsNotNull(hechizo);
-    }
+        [Test]
+        public void HechizoConstructorTest()
+        {
+            hechizo = new Hechizo("hechizo1", 10, 10);
 
-    [Test]
-    public void HechizoAtaqueTest()
-    {
-        hechizo = new Hechizo("hechizo1", 10, 10);
+            Assert.IsNotNull(hechizo);
+        }
 
-        Assert.AreEqual(10, hechizo.Ataque);
-    }
+        [Test]
+        public void HechizoAtaqueTest()
+        {
+            hechizo = new Hechizo("hechizo1", 10, 10);
 
-    [Test]
-    public void HechizoDefensaTest()
-    {
-        Assert.AreEqual(10, hechizo.Defensa);
-    }
+            Assert.AreEqual(10, hechizo.Ataque);
+        }
 
-    [Test]
-    public void HechizoNombreTest()
-    {
-        Assert.AreEqual("hechizo1", hechizo.Nombre);
-    }
+        [Test]
+        public void HechizoDefensaTest()
+        {
+            Assert.AreEqual(10, hechizo.Defensa);
+        }
 
-    [Test]
-    public void HechizoNombreTest2()
-    {
-        hechizo = new Hechizo("hechizo2", 10, 10);
+        [Test]
+        public void HechizoNombreTest()
+        {
+            Assert.AreEqual("hechizo1", hechizo.Nombre);
+        }
 
-        Assert.AreEqual("hechizo2", hechizo.Nombre);
-    }
+        [Test]
+        public void HechizoNombreTest2()
+        {
+            hechizo = new Hechizo("hechizo2", 10, 10);
 
-    [Test]
-    public void HechizoAtaqueTest2()
-    {
-        hechizo = new Hechizo("hechizo2", 10, 10);
+            Assert.AreEqual("hechizo2", hechizo.Nombre);
+        }
 
-        Assert.AreEqual(10, hechizo.Ataque);
+        [Test]
+        public void HechizoAtaqueTest2()
+        {
+            hechizo = new Hechizo("hechizo2", 10, 10);
+
+            Assert.AreEqual(10, hechizo.Ataque);
+        }
     }
 }

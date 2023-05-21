@@ -1,5 +1,3 @@
-using NUnit.Framework;
-
 namespace Library.Test
 {
     public class EspadaTest
