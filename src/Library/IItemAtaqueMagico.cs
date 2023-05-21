@@ -9,6 +9,5 @@ namespace Library
     public interface IItemMagicoAtaque
     {
       int ObtenerValorAtaque();
-    
     }
 }

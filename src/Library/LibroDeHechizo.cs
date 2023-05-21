@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 namespace Library
 {
-    public class LibroDeHechizo : Elemento, IElemento
+    public class LibroDeHechizo : Elemento, ILibroDeHechizo
     {
         public List<Hechizo> Hechizos { get; set; } = new List<Hechizo>();
 
-        public void AgrgarHechizo(Hechizo hechizo)
+        public void AgregarHechizo(Hechizo hechizo)
         {
             this.Hechizos.Add(hechizo);
             this.Ataque += hechizo.Ataque;

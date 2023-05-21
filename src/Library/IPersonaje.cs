@@ -2,6 +2,7 @@ namespace Library
 {
     public interface IPersonaje
     {
+        string Nombre { get; set; }
         int Vida { get; set; }
         int Ataque { get; set; }
         int Defensa { get; set; }

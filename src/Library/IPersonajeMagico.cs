@@ -5,9 +5,9 @@ namespace Library
 {
     public interface IPersonajeMagico : IPersonaje
     {
-        public void AgregarHechizo(string hechizo);
-        public void BorrarHechizo(string hechizo);
-        public void AgregarElementoMagico(string item);
-        public void BorrarElementoMagico(string item);
+        public void AgregarHechizo(Hechizo hechizo);
+        public void BorrarHechizo(Hechizo hechizo);
+        public void AgregarElementoMagico(ILibroDeHechizo item);
+        public void BorrarElementoMagico(ILibroDeHechizo item);
     }
 }

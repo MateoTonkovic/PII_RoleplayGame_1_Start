@@ -15,14 +15,14 @@ namespace Library
 
         public int PuntosDeVictoria { get; set; }
 
-        public List<IElemento> Elementos = new List<IElemento>();
+        public List<IElemento> Elementos { get; set; } = new List<IElemento>();
 
         public int ObtenerVida()
         {
             return this.Vida;
         }
 
-        public int ObtenerAtaque()
+        public virtual int ObtenerAtaque()
         {
             int ataque = this.Ataque;
 
@@ -34,7 +34,7 @@ namespace Library
             return ataque;
         }
 
-        public int ObtenerDefensa()
+        public virtual int ObtenerDefensa()
         {
             int defensa = this.Defensa;
 
@@ -63,7 +63,20 @@ namespace Library
 
         public void RecibirAtaque(int ataque)
         {
-            this.Vida -= ataque;
+            int daño = ataque - this.ObtenerDefensa();
+
+            if (daño > 0)
+            {
+                if (this.Vida - daño < 0)
+                {
+                    this.Vida = 0;
+                }
+                else
+                {
+                    this.Vida -= daño;
+                }
+            }
+
         }
 
         public int ObtenerPuntosDeVictoria()
