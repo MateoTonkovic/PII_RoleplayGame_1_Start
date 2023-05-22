@@ -83,14 +83,19 @@ namespace Library
                         for (int i = 0; i < this.Heroes.Count; i++)
                         {
                             IEnemigo enemigo = this.Enemigos[positionToAttack];
-                            this.Lucha(this.Heroes[i], enemigo);
+                            IHeroe heroe = this.Heroes[i];
+
+                            this.Lucha(heroe, enemigo);
 
                             if (enemigo.ObtenerVida() <= 0)
                             {
                                 Console.WriteLine($"{enemigo.Nombre} ha muerto");
+                                this.Enemigos.Remove(enemigo);
                                 delay();
 
-                                this.Enemigos.Remove(enemigo);
+                                Console.WriteLine($"{heroe.Nombre} ha ganado {enemigo.ObtenerPuntosDeVictoria()} puntos de victoria");
+                                heroe.AgregarPuntosDeVictoria(enemigo.ObtenerPuntosDeVictoria());
+                                delay();
                             }
 
                             if (i + 1 > Enemigos.Count)

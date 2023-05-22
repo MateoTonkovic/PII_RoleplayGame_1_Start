@@ -35,7 +35,7 @@ namespace Program
 
             // caballero.AgregarElemento(escudo);
             caballero.AgregarElemento(lanza);
-
+    
             campoDeBatalla.AgregarEnemigo(arquero);
             campoDeBatalla.AgregarEnemigo(caballero);
 
