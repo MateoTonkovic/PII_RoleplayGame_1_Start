@@ -11,7 +11,7 @@ namespace Library.Test
         public void MagoConstructorTest()
         {
             Mago mago = new Mago("Juan");
-            mago.AgregarElemento(new BastonMagico(10, 10));
+            mago.AgregarElementoMagico(new BastonMagico(10, 10));
 
             Assert.IsNotNull(mago);
         }
@@ -21,7 +21,8 @@ namespace Library.Test
         {
 
             Mago mago = new Mago("Juan");
-            mago.AgregarElemento(new BastonMagico(10, 10));
+            IItemMagico bastonMagico = new BastonMagico(10, 10);
+            mago.AgregarElementoMagico(bastonMagico);
 
 
             Assert.AreEqual(10, mago.ObtenerDefensa());

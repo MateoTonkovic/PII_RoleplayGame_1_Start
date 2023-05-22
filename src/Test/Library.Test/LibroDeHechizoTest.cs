@@ -47,7 +47,7 @@ namespace Library.Test
             LibroDeHechizo libroDeHechizo = new LibroDeHechizo();
             Hechizo hechizo = new Hechizo("Hechizo1", 10, 10);
 
-            libroDeHechizo.AgrgarHechizo(hechizo);
+            libroDeHechizo.AgregarHechizo(hechizo);
 
             Assert.AreEqual(10, libroDeHechizo.Ataque);
             Assert.AreEqual(10, libroDeHechizo.Defensa);
@@ -60,8 +60,8 @@ namespace Library.Test
             Hechizo hechizo = new Hechizo("Hechizo1", 10, 10);
             Hechizo hechizo2 = new Hechizo("Hechizo2", 10, 10);
 
-            libroDeHechizo.AgrgarHechizo(hechizo);
-            libroDeHechizo.AgrgarHechizo(hechizo2);
+            libroDeHechizo.AgregarHechizo(hechizo);
+            libroDeHechizo.AgregarHechizo(hechizo2);
 
             Assert.AreEqual(20, libroDeHechizo.Ataque);
             Assert.AreEqual(20, libroDeHechizo.Defensa);

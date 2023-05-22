@@ -17,25 +17,23 @@ namespace Library.Test
         [Test]
         public void CaballeroAtaqueTest()
         {
+
             Caballero caballero = new Caballero("Jorge", 20);
-            int ataqueEsperado = 5;
+            caballero.AgregarElemento(new Espada(20, 15));
 
-            int ataque = caballero.ObtenerAtaque();
 
-            Assert.AreEqual(ataqueEsperado, ataque);
-
+            Assert.AreEqual(20, caballero.ObtenerAtaque());
         }
 
         [Test]
         public void CaballeroDefensaTest()
         {
+
             Caballero caballero = new Caballero("Jorge", 20);
-            int defensaEsperada = 5;
+            caballero.AgregarElemento(new Pechera(15));
 
-            int defensa = caballero.ObtenerDefensa();
 
-            Assert.AreEqual(defensaEsperada, defensa);
-
+            Assert.AreEqual(15, caballero.ObtenerDefensa());
         }
 
         [Test]

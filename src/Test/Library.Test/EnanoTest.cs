@@ -30,14 +30,25 @@ namespace Library.Test
         }
 
         [Test]
+        public void EnanoAtaqueTest()
+        {
+            Enano enano = new Enano("Carlos");
+            enano.AgregarElemento(new Lanza(30,25));
+
+
+            Assert.AreEqual(30, enano.ObtenerAtaque());
+
+        }
+
+        [Test]
         public void EnanoDefensaTest()
         {
 
             Enano enano = new Enano("Carlos");
-            enano.AgregarElemento(new Lanza(10, 10));
+            enano.AgregarElemento(new Lanza(30, 25));
 
 
-            Assert.AreEqual(10, enano.ObtenerDefensa());
+            Assert.AreEqual(25, enano.ObtenerDefensa());
         }
 
         [Test]
@@ -53,18 +64,6 @@ namespace Library.Test
         {
             Enano enano = new Enano("Carlos");
             Assert.AreEqual("Carlos", enano.Nombre);
-        }
-
-        [Test]
-        public void EnanoAtaqueTest()
-        {
-            Enano enano = new Enano("Carlos");
-            int ataqueEsperado = 30;
-
-            int ataque = enano.ObtenerAtaque();
-
-            Assert.AreEqual(ataqueEsperado, ataque);
-
         }
 
         [Test]
