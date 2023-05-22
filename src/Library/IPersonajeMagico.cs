@@ -7,7 +7,7 @@ namespace Library
     {
         public void AgregarHechizo(Hechizo hechizo);
         public void BorrarHechizo(Hechizo hechizo);
-        public void AgregarElementoMagico(ILibroDeHechizo item);
-        public void BorrarElementoMagico(ILibroDeHechizo item);
+        public void AgregarElementoMagico(IItemMagico item);
+        public void BorrarElementoMagico(IItemMagico item);
     }
 }

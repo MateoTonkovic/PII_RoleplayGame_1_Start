@@ -26,7 +26,7 @@ namespace Library
         {
             int ataque = this.Ataque;
 
-            foreach (Elemento elemento in this.Elementos)
+            foreach (IElemento elemento in this.Elementos)
             {
                 ataque += elemento.Ataque;
             }
@@ -38,7 +38,7 @@ namespace Library
         {
             int defensa = this.Defensa;
 
-            foreach (Elemento elemento in this.Elementos)
+            foreach (IElemento elemento in this.Elementos)
             {
                 defensa += elemento.Defensa;
             }

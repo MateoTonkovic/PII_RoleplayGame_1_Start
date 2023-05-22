@@ -1,5 +1,8 @@
 namespace Library
 {
-    public interface IItemMagico : IItemMagicoAtaque, IItemMagicoDefensa { }
-
+    public interface IItemMagico
+    {
+        int ObtenerValorAtaque();
+        int ObtenerValorDefensa();
+    }
 }

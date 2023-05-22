@@ -5,10 +5,6 @@ using System.Text;
 
 namespace Library
 {
-   
-    public interface IItemMagicoDefensa
-    {
-      int ObtenerValorDefensa();
-    
-    }
+    public interface IItemMagicoDefensa : IItemMagico { }
+
 }

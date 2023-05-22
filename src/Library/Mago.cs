@@ -7,41 +7,33 @@ namespace Library
     public class Mago : Heroe, IPersonajeMagico
     {
 
-        public List<ILibroDeHechizo> ElementosMagicos { get; set; } = new List<ILibroDeHechizo>();
+        public List<IItemMagico> ElementosMagicos { get; set; } = new List<IItemMagico>();
+        public List<Hechizo> Hechizos { get; set; } = new List<Hechizo>();
+
         public Mago(string nombre)
         {
             this.Nombre = nombre;
             this.PuntosDeVictoria = 0;
         }
 
-        public void AgregarElementoMagico(ILibroDeHechizo libroDeHechizo)
+        public void AgregarElementoMagico(IItemMagico itemMagico)
         {
-            this.ElementosMagicos.Add(libroDeHechizo);
+            this.ElementosMagicos.Add(itemMagico);
         }
 
-        public void BorrarElementoMagico(ILibroDeHechizo libroDeHechizo)
+        public void BorrarElementoMagico(IItemMagico itemMagico)
         {
-            this.ElementosMagicos.Remove(libroDeHechizo);
+            this.ElementosMagicos.Remove(itemMagico);
         }
 
         public void AgregarHechizo(Hechizo hechizo)
         {
-            if (this.ElementosMagicos.Count > 0)
-            {
-                this.ElementosMagicos[0].AgregarHechizo(hechizo);
-            }
-            else
-            {
-                LibroDeHechizo libroDeHechizo = new LibroDeHechizo();
-                libroDeHechizo.AgregarHechizo(hechizo);
-            }
+            this.Hechizos.Add(hechizo);
         }
+
         public void BorrarHechizo(Hechizo hechizo)
         {
-            if (this.ElementosMagicos.Count > 0)
-            {
-                this.ElementosMagicos[0].QuitarHechizo(hechizo);
-            }
+            this.Hechizos.Remove(hechizo);
         }
 
         public override int ObtenerAtaque()
@@ -65,11 +57,18 @@ namespace Library
         {
             int defensa = base.ObtenerDefensa(); ;
 
-            foreach (ILibroDeHechizo elemento in this.ElementosMagicos)
+            foreach (IItemMagico elemento in this.ElementosMagicos)
             {
-                foreach (Hechizo hechizo in elemento.Hechizos)
+                if (elemento is ILibroDeHechizo libroDeHechizo)
                 {
-                    defensa += hechizo.Defensa;
+                    foreach (Hechizo hechizo in libroDeHechizo.Hechizos)
+                    {
+                        defensa += hechizo.Defensa;
+                    }
+                }
+                else if (elemento is BastonMagico bastonMagico)
+                {
+                    defensa += bastonMagico.Defensa;
                 }
             }
 

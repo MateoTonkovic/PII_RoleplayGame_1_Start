@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Library
 {
-    public class LibroDeHechizo : Elemento, ILibroDeHechizo
+    public class LibroDeHechizo : Elemento, ILibroDeHechizo, IItemMagico
     {
         public List<Hechizo> Hechizos { get; set; } = new List<Hechizo>();
 
@@ -20,6 +20,16 @@ namespace Library
             this.Hechizos.Remove(hechizo);
             this.Ataque -= hechizo.Ataque;
             this.Defensa -= hechizo.Defensa;
+        }
+        
+        public int ObtenerValorAtaque()
+        {
+            return this.Ataque;
+        }
+
+        public int ObtenerValorDefensa()
+        {
+            return this.Defensa;
         }
     }
 }

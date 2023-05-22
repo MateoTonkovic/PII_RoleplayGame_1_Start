@@ -4,10 +4,6 @@ using System.Text;
 
 namespace Library
 {
-   
+    public interface IItemMagicoAtaque : IItemMagico { }
     
-    public interface IItemMagicoAtaque
-    {
-      int ObtenerValorAtaque();
-    }
 }

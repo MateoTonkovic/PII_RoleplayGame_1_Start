@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace Library
 {
-    public interface ILibroDeHechizo
+    public interface ILibroDeHechizo : IItemMagico
     {
         List<Hechizo> Hechizos { get; }
         void AgregarHechizo(Hechizo hechizo);
