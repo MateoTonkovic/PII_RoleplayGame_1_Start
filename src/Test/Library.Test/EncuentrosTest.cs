@@ -38,12 +38,13 @@ namespace Library.Test
         {
             Encuentro encuentro = new Encuentro();
             Elfo heroe = new Elfo("legolas", 10);
-            Orco enemigo = new Orco("orco", 10);
+            Orco enemigo = new Orco("orco", 4);
 
             Espada espada = new Espada(100, 10);
-            Lanza lanza = new Lanza(20, 10);
+            Lanza lanza = new Lanza(30, 10);
 
             heroe.AgregarElemento(espada);
+            enemigo.AgregarElemento(lanza);
 
             encuentro.AgregarHeroe(heroe);
             encuentro.AgregarEnemigo(enemigo);
@@ -51,8 +52,8 @@ namespace Library.Test
 
             encuentro.DoEncounter();
             // Assert
-            Assert.AreEqual(10, enemigo.Vida);
-            Assert.AreEqual(90, heroe.Vida);
+            Assert.AreEqual(0, enemigo.Vida);
+            Assert.AreEqual(80, heroe.Vida);
         }
 
 
@@ -82,7 +83,7 @@ namespace Library.Test
             // Assert
             Assert.AreEqual(0, enemigo.Vida);
             Assert.AreEqual(80, elfoHeroe.Vida);
-            Assert.AreEqual(4, enano.PuntosDeVictoria);
+            Assert.AreEqual(4, elfoHeroe.PuntosDeVictoria);
         }
 
         [Test]
