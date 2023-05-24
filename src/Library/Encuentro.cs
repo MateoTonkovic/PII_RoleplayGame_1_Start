@@ -4,7 +4,7 @@ using System.Threading;
 
 namespace Library
 {
-    public class CampoDeBatalla
+    public class Encuentro
     {
         public List<IHeroe> Heroes = new List<IHeroe>();
         public List<IEnemigo> Enemigos = new List<IEnemigo>();
